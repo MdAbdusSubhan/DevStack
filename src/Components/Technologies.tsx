@@ -19,7 +19,7 @@ const Technologies = ({ stackData, stackButton, setStackButton}: TechnologiesPro
             <p className="mt-2 text-sm text-gray-500 sm:text-base">
                 Pick one technology per category to build your ideal stack.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row items-start gap-6 ">
+            <div className="mt-8 flex flex-col lg:flex-row items-start gap-6 ">
                 <StackCard stackButton={stackButton} setStackButton={setStackButton} stackData={stackData}></StackCard>
                 <Selected stackButton={stackButton} setStackButton={setStackButton} stackData={stackData}></Selected>
             </div>
