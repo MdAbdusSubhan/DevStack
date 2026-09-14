@@ -1,15 +1,17 @@
-import type { Dispatch, SetStateAction } from "react";
+import { use, type Dispatch, type SetStateAction } from "react";
 import type { StackType } from "../Types/StackType";
 import StackCard from "./StackCard";
 import Selected from "./Selected";
 
 export interface TechnologiesProps {
-    stackData: StackType[]
+    stackPromise: Promise<StackType[]>
     stackButton: string[]
     setStackButton: Dispatch<SetStateAction<string[]>>
 }
 
-const Technologies = ({ stackData, stackButton, setStackButton}: TechnologiesProps) => {
+const Technologies = ({ stackPromise, stackButton, setStackButton}: TechnologiesProps) => {
+
+    const stackData = use(stackPromise);
 
     return (
         <div className="mx-auto max-w-7xl px-4 pb-4 text-center lg:text-left">
