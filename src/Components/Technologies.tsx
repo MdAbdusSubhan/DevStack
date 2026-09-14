@@ -1,10 +1,14 @@
+import type { Dispatch, SetStateAction } from "react";
 import type { StackType } from "../Types/StackType";
+import StackCard from "./StackCard";
 
 export interface TechnologiesProps {
-    stackPromise: Promise<StackType[]>
+    stackData: StackType[]
+    stackButton: string[]
+    setStackButton: Dispatch<SetStateAction<string[]>>
 }
 
-const Technologies = ({ prop }: TechnologiesProps) => {
+const Technologies = ({ stackData, stackButton, setStackButton}: TechnologiesProps) => {
 
     return (
         <div className="mx-auto max-w-7xl pb-4 text-center sm: md:text-center lg: lg:text-left">
@@ -14,6 +18,9 @@ const Technologies = ({ prop }: TechnologiesProps) => {
             <p className="mt-2 text-sm text-gray-500 sm:text-base">
                 Pick one technology per category to build your ideal stack.
             </p>
+            <div className="mt-8">
+                <StackCard stackButton={stackButton} setStackButton={setStackButton} stackData={stackData}></StackCard>
+            </div>
         </div>
         
     )

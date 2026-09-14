@@ -1,5 +1,5 @@
 
-import { use } from 'react'
+import { Suspense, use, useState } from 'react'
 import './App.css'
 import Banner from './Components/Banner'
 import Nav from "./Components/Nav"
@@ -12,16 +12,24 @@ const stackFetch = async (): Promise<StackType[]> => {
   return data;
 }
 
+const stackPromise = stackFetch()
+
 function App() {
 
-  const stackPromise = use(stackFetch())
+  const stackData = use(stackPromise)
+
+  const [stackButton, setStackButton] = useState<string[]>([])
 
 
   return (
     <>
       <Nav></Nav>
       <Banner></Banner>
-      <Technologies stackPromise={stackPromise}></Technologies>
+      <Suspense fallback="loading Stacks...">
+        <div>
+          <Technologies stackButton={stackButton} setStackButton={setStackButton}  stackData={stackData}></Technologies>
+        </div>
+      </Suspense>
     </>
   )
 }
