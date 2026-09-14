@@ -10,7 +10,7 @@ export default function Nav() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="w-full border-b border-gray-100 bg-white">
+        <nav className="w-full border-b border-gray-100 bg-white sticky top-0">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
                 
                 <button
