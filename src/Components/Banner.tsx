@@ -3,7 +3,7 @@ import heroImage from "../assets/banner-stack.png";
 export default function Banner() {
   return (
     <section className="w-full bg-white">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 px-4 py-16 sm:px-6 lg:flex-row lg:justify-between lg:px-8 lg:py-24">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 px-4 py-10 sm:px-6 lg:flex-row lg:justify-between lg:px-8 lg:py-24">
         
         <div className="max-w-xl text-center lg:text-left">
           <h1 className="text-4xl font-extrabold leading-tight text-gray-900 sm:text-5xl">
