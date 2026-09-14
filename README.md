@@ -4,7 +4,7 @@ A simple React project where users can explore different technology stacks and s
 
 ## Live Demo
 
-[Live Demo](#)
+[View Live Project](https://prismatic-crisp-6df47b.netlify.app/)
 
 ## Technologies Used
 
