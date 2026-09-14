@@ -5,6 +5,7 @@ import Banner from './Components/Banner'
 import Nav from "./Components/Nav"
 import Technologies from './Components/Technologies'
 import type { StackType } from './Types/StackType'
+import { ToastContainer } from 'react-toastify'
 
 const stackFetch = async (): Promise<StackType[]> => {
   const res = await fetch("/data.json");
@@ -30,6 +31,9 @@ function App() {
           <Technologies stackButton={stackButton} setStackButton={setStackButton}  stackData={stackData}></Technologies>
         </div>
       </Suspense>
+
+
+      <ToastContainer></ToastContainer>
     </>
   )
 }
